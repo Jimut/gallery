@@ -1,4 +1,26 @@
+@import 'utils'
+@import 'colors'
 @import 'fonts'
 
+body
+  background-color: $grey-50
+
+.container
+  padding-top: 50px
+
 #gallery
-  height: 100%
+  margin: 0 auto
+  height: 337px
+  width: 600px
+  background-color: $grey-850
+  overflow: hidden
+
+  .gallery-grid
+    height: 100%
+    width: 100%
+
+    .image-wrapper
+      height: 100%
+
+      img
+        height: 100%
