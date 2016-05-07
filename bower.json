@@ -1,0 +1,23 @@
+{
+  "name": "Gallery",
+  "authors": [
+    "Jimut <jemdhali67@gmail.com>"
+  ],
+  "description": "Gallery made with Angularjs",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.8",
+    "material-design-icons": "^2.2.3"
+  },
+  "directory": "src/bower_components/"
+}
