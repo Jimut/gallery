@@ -54,12 +54,47 @@ body {
   margin: 0 auto;
   height: 337px;
   width: 600px;
-  background-color: #303030;
-  overflow: hidden; }
+  background-color: #212121;
+  overflow: auto; }
   #gallery .gallery-grid {
+    width: 100%;
+    padding: 8px; }
+    #gallery .gallery-grid .img-wrapper {
+      cursor: pointer; }
+      #gallery .gallery-grid .img-wrapper .img-tile-div {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+  #gallery .gallery-show {
+    width: 100%;
     height: 100%;
-    width: 100%; }
-    #gallery .gallery-grid .image-wrapper {
-      height: 100%; }
-      #gallery .gallery-grid .image-wrapper img {
-        height: 100%; }
+    background-color: #000000; }
+    #gallery .gallery-show.ng-enter {
+      -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+      transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+      opacity: 0; }
+    #gallery .gallery-show.ng-enter.ng-enter-active {
+      opacity: 1; }
+    #gallery .gallery-show .img-show-div {
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center; }
+      #gallery .gallery-show .img-show-div:hover > .img-toolbar {
+        opacity: 1; }
+      #gallery .gallery-show .img-show-div .img-toolbar {
+        opacity: 0;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.87)), to(transparent));
+        background: -webkit-linear-gradient(rgba(0, 0, 0, 0.87), transparent);
+        background: linear-gradient(rgba(0, 0, 0, 0.87), transparent);
+        -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+        transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1); }
+        #gallery .gallery-show .img-show-div .img-toolbar md-icon {
+          color: white; }

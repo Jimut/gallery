@@ -15,20 +15,29 @@
     <div class="container">
       <div id="gallery">
 
-        <div class="gallery-grid">
-          <div class="image-wrapper" ng-repeat="image in images">
-            <img ng-src="{{ image }}">
+        <div class="gallery-grid" ng-if="!imageShow.state">
+          <md-grid-list md-cols="4"
+                        md-row-height="1:1"
+                        md-gutter="0.5em">
+            <md-grid-tile ng-repeat="image in images"
+                          ng-click="displayImage($index)"
+                          class="img-wrapper">
+              <div class="img-tile-div" style="background-image: url({{ image }})"></div>
+            </md-grid-tile>
+          </md-grid-list>
+        </div>
 
-            <div class="image-actions">
-              <md-button class="md-icon-button">
-                <md-icon>cross</md-icon>
+        <div class="gallery-show" ng-if="imageShow.state">
+          <div class="img-show-div" style="background-image: url({{ imageShow.image }})">
+            <div class="img-toolbar" layout="row">
+              <md-button ng-click="displayGrid()" class="md-icon-button">
+                <md-icon>arrow_back</md-icon>
+              </md-button>
+              <md-button ng-click="deleteImage(imageShow.imageIndex)" class="md-icon-button">
+                <md-icon>delete</md-icon>
               </md-button>
             </div>
           </div>
-        </div>
-
-        <div class="gallery-show">
-
         </div>
 
       </div>
