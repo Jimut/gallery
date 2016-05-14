@@ -13,7 +13,7 @@
   <body ng-controller="GalleryController" ng-cloak>
 
     <div class="container">
-      <div id="gallery">
+      <div id="gallery" md-whiteframe="4">
 
         <div class="gallery-grid" ng-if="!imageShow.state">
           <md-grid-list md-cols="4"
@@ -29,7 +29,7 @@
 
         <div class="gallery-show" ng-if="imageShow.state">
           <div class="img-show-div" style="background-image: url({{ imageShow.image }})">
-            <div class="img-toolbar" layout="row">
+            <div class="img-toolbar" layout="row" layout-align="space-between">
               <md-button ng-click="displayGrid()" class="md-icon-button">
                 <md-icon>arrow_back</md-icon>
               </md-button>

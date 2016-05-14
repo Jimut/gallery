@@ -51,12 +51,16 @@ body {
   padding-top: 50px; }
 
 #gallery {
+  position: relative;
   margin: 0 auto;
   height: 337px;
   width: 600px;
   background-color: #212121;
   overflow: auto; }
   #gallery .gallery-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 8px; }
     #gallery .gallery-grid .img-wrapper {
@@ -68,15 +72,23 @@ body {
         background-size: cover;
         background-position: center; }
   #gallery .gallery-show {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #000000; }
-    #gallery .gallery-show.ng-enter {
+    #gallery .gallery-show.ng-animate {
       -webkit-transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
-      transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+      transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1); }
+    #gallery .gallery-show.ng-enter {
       opacity: 0; }
     #gallery .gallery-show.ng-enter.ng-enter-active {
       opacity: 1; }
+    #gallery .gallery-show.ng-leave {
+      opacity: 1; }
+    #gallery .gallery-show.ng-leave-active {
+      opacity: 0; }
     #gallery .gallery-show .img-show-div {
       height: 100%;
       width: 100%;
@@ -87,10 +99,6 @@ body {
         opacity: 1; }
       #gallery .gallery-show .img-show-div .img-toolbar {
         opacity: 0;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
         background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.87)), to(transparent));
         background: -webkit-linear-gradient(rgba(0, 0, 0, 0.87), transparent);
         background: linear-gradient(rgba(0, 0, 0, 0.87), transparent);
